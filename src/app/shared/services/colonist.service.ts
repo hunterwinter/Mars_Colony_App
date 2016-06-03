@@ -20,7 +20,6 @@ export class ColonistService {
                 .toPromise()
                 .then( response => response.json().colonist )
                 .catch(this.handleError)
-   
 
   }
   

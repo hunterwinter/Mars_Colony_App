@@ -1,0 +1,24 @@
+.hundred{
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    display: flex;
+}
+
+// .list{
+//     display: flex;
+//     width: 100%;
+//     background-color: white;
+//     max-height: 50vh;
+//     overflow: scroll;
+//     overflow-x: hidden;
+// }
+
+ul{
+    max-width: 100vw;
+    background-color: white;
+    max-height: 80vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+}

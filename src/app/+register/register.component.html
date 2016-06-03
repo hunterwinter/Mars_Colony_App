@@ -1,3 +1,27 @@
-<p>
-  register works!
-</p>
+<div class="hundred">
+  <div class="container">
+    <h1>Registration</h1>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="">
+      <fieldset>
+          <label for="name" class="namestyle">Name</label>
+      <div class="stylein">
+          <input ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required>
+      </div>
+          <label for="age">Age</label>
+      <div class="stylein">
+          <input ngControl="age" [(ngModel)]="colonist.age" id="age" type="number" required>
+      </div>
+        <div class="choose">
+          <select ngControl="job_id" [(ngModel)]="colonist.job_id"  name="occupation" class="form-control">
+            <option [value]="NO_OCCUPATION_SELECTED">Choose Occupation</option>
+            <option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
+          </select>
+          <hr/>
+        </div>
+      </fieldset>
+      <fieldset>
+        <button class="check-in" type="submit" name="check-in" [disabled]="noOccupation || !registerForm.form.valid">Check in</button>
+      </fieldset>
+    </form>
+  </div>
+</div>

@@ -1,3 +1,20 @@
-<p>
-  encounters works!
-</p>
+<div class="hundred">
+  <h1>
+    Recent Encounters
+      <span>Report any Alien Encounters</span>
+  </h1>
+    <div class="list">
+    <ul>
+      <li *ngFor="let encounter of encounters" >
+        <div>
+          {{ encounter.date }} -
+          <span>{{ encounter.atype }}</span>
+        </div>
+        <p>{{ encounter.action }}</p>
+      </li>
+    </ul>
+     </div>
+    <div class="footer">
+      <a [routerLink]="['/report']"><div class="button">Report</div></a>
+    </div>
+</div>
