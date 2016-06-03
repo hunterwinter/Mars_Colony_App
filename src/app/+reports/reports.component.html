@@ -1,3 +1,20 @@
-<div class="rep-contain">
-
+<div class="hundred">
+  <h1>
+    Report Your Encounter
+    <span>Recording interactions with the aliens is key to our survival</span>
+  </h1>
+  <form (ngSubmit)="onSubmit($event, reportForm)" #reportForm="ngForm">
+    <fieldset class="text-field">
+      <div class="selects">
+        <select ngControl="atype" [(ngModel)]="encounters.atype">
+          <option [value]="NO_ALIEN_SELECTED" class="placeholder" disabled="disabled" selected="selected">Select alien type</option>
+          <option *ngFor="let alien of aliens" [value]="alien.id"> {{ alien.type }}</option>
+        </select>
+      </div>
+      <textarea ngControl="action" [(ngModel)]="encounters.action" name="Action_taken" placeholder="record your response" required></textarea>
+    </fieldset>
+    <fieldset>
+        <button class="button" ng-click="enter($event)" [disabled]="noAlien || !reportForm.form.valid">Submit Report</button>
+    </fieldset>
+  </form>
 </div>
