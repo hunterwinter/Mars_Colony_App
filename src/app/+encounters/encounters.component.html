@@ -3,6 +3,7 @@
     Recent Encounters
       <span>Report any Alien Encounters</span>
   </h1>
+  <h1 *ngIf="!encounters || encounters.length < 1" >Loading...</h1>
     <div class="list">
     <ul>
       <li *ngFor="let encounter of encounters" >
@@ -15,6 +16,6 @@
     </ul>
      </div>
     <div class="footer">
-      <a [routerLink]="['/report']"><div class="button">Report</div></a>
+      <a [routerLink]="['/reports']"><div class="button">Report</div></a>
     </div>
 </div>

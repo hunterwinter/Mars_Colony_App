@@ -35,7 +35,8 @@ export class RegisterComponent implements OnInit {
   
   onSubmit(event): void {
     this.colonistService.createColonist(this.colonist)
-                        .then( colonist => this.router.navigate(['/encounters']) )
+                        .then( (colonist) => {this.router.navigate(['/encounters']), 
+                        sessionStorage.setItem('sessionColonist', colonist.id)})
   }
   
   get noOccupation() : boolean{
