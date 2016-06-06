@@ -3,6 +3,8 @@
     width: 100vw;
     background: black;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hundred h1 {
@@ -19,7 +21,6 @@
     width: 75vw;
 }
 
-
 ul{
     max-width: 100vw;
     background-color: white;
@@ -27,5 +28,6 @@ ul{
     overflow: scroll;
     overflow-x: hidden;
     text-align: center;
+    list-style-type: circle;
 }
 
