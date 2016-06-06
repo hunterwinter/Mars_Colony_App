@@ -1,3 +1,5 @@
+@import '../shared/styles/mixins';
+
 .hundred{
     height: 100%;
     width: 100vw;
@@ -15,6 +17,7 @@
         font-family: avenir, sans-serif;
         text-align: center;
         margin-top: 1em;
+        padding-right: 45px;
     }
 }
 

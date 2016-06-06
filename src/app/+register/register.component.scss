@@ -18,10 +18,10 @@ h1 {
     flex-direction: column;
     align-self: center;
     justify-content: center; 
-    font-size: 4.7rem;
+    font-size: 4.3rem;
     font-family: avenir, sans-serif;
     color: black;
-    margin: 1em 0 1em 0;
+    margin-bottom: 1em; 
 }
 
 fieldset{
@@ -51,17 +51,24 @@ input {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    
+    select {
+        -webkit-appearance: none;
+        background: transparent;
+        font-size: 1.5rem;
+        font-family: sans-serif, ariel;
+        margin: 0 auto;
+        padding: 5px 35px 5px 35px;
+    }
 }
 
 button{ 
     font-family: sans-serif, ariel;
+    font-size: 1.5rem;
     background: white;
     margin: 0 auto;
-    width: 25vw;
+    width: 290px;
     height: 40px;
     border-radius: 10px;
 }
 
-hr {
-    display: none;
-}
