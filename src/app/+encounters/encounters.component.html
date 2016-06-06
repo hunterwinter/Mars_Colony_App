@@ -1,7 +1,6 @@
 <div class="hundred">
   <h1>
     Recent Encounters
-      <span>Report any Alien Encounters</span>
   </h1>
   <h1 *ngIf="!encounters || encounters.length < 1" >Loading...</h1>
     <div class="list">
@@ -16,6 +15,6 @@
     </ul>
      </div>
     <div class="footer">
-      <a [routerLink]="['/reports']"><div class="button">Report</div></a>
+      <a [routerLink]="['/reports']"><div class="report-button">Report!</div></a>
     </div>
 </div>
